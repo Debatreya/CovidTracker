@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav><button onclick="theme()">THEME</button></nav>
     <table id = "data">
         <tr>
             <th>State</th>
@@ -40,14 +39,7 @@
             }
             return A ;
         }
-        function theme() {
-            if (document.body.style.colorScheme == "dark"){
-                document.body.style.colorScheme = "light"
-            }
-            else{
-                document.style.colorScheme = "dark"
-            }
-        }
+        //fetching
         fetch("https://api.rootnet.in/covid19-in/stats/latest").then((res)=>res.json()).then(resp=>{
         // console.log(resp)
         let table = document.getElementById("data")
